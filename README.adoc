@@ -1,0 +1,50 @@
+= 2015 Redteam Exercise Setup
+
+== Network
+The network consists of two subnets:
+
+* 10.0.1.* for Team 1
+* 10.0.2.* for Team 2
+* 10.0.0.* for the Red Team (Nothing implemented there yet)
+
+Connecting to boxes with DNS is in the form <boxname>.<teamname>.uwctf.ninja
+
+Connect to
+vpn.uwctf.ninja to be placed on the redteam subnet (not implemented yet)
+
+== Blue Team Boxes
+=== Services
+* ?
+
+=== Boxes
+.Machines
+|===
+| Box Name     | Team Name | DNS                            | OS                      | Notes
+| breathtaking | Team 1    | breathtaking.team1.uwctf.ninja | Windows Server 2012     |
+| breathtaking | Team 2    | breathtaking.team2.uwctf.ninja | Windows Server 2012     |
+| excellent    | Team 1    | excellent.team1.uwctf.ninja    | Windows Server 2008     |
+| excellent    | Team 2    | excellent.team2.uwctf.ninja    | Windows Server 2008     |
+| marvelous    | Team 1    | marvelous.team1.uwctf.ninja    | Windows Server 2003     | (Already loaded with IIS MS SQL 2005)
+| marvelous    | Team 2    | marvelous.team2.uwctf.ninja    | Windows Server 2003     | (Already loaded with IIS MS SQL 2005)
+| magnificent  | Team 1    | magnificent.team1.uwctf.ninja  | Free BSD 10             |
+| magnificent  | Team 2    | magnificent.team2.uwctf.ninja  | Free BSD 10             |
+| wondrous     | Team 1    | wondrous.team1.uwctf.ninja     | Ubuntu Server 14.04 LTS |
+| wondrous     | Team 2    | wondrous.team2.uwctf.ninja     | Ubuntu Server 14.04 LTS |
+| splendid     | Team 1    | splendid.team1.uwctf.ninja     | Ubunt Server 12.04 LTS  |
+| splendid     | Team 2    | splendid.team2.uwctf.ninja     | Ubunt Server 12.04 LTS  |
+| grand        | Team 1    | grand.team1.uwctf.ninja        | CentOS 5.4              |
+| grand        | Team 2    | grand.team2.uwctf.ninja        | CentOS 5.4              |
+| brilliant    | Team 1    | brilliant.team1.uwctf.ninja    | Fedora                  |
+| brilliant    | Team 2    | brilliant.team2.uwctf.ninja    | Fedora                  |
+| outstanding  | Team 1    | outstanding.team1.uwctf.ninja  | Ubuntu Server 14.04 LTS |
+| outstanding  | Team 2    | outstanding.team2.uwctf.ninja  | Ubuntu Server 14.04 LTS |
+|===
+
+=== AWS Setup
+Everything is attached to the pwnage resource group, so every part of the project has the following tag: project=pwnage
+
+.ec2 instances are tagged Thusly
+* project=pwnage
+* team=team1
+* DNS=fabulous
+* ostype=win/linux/bsd
